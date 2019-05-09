@@ -11,7 +11,6 @@ apt-get upgrade -y
 apt-get install -y gluu-server-${gluu_version}
 /sbin/gluu-serverd-${gluu_version} enable
 /sbin/gluu-serverd-${gluu_version} start
-/sbin/gluu-serverd-${gluu_version} login
 
 cat <<EOF > /opt/gluu-server-${gluu_version}/install/community-edition-setup/setup.properties
 ip=$PUBLIC_IPV4
