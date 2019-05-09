@@ -21,8 +21,8 @@ orgName=${org_name}
 countryCode=${country_code}
 city=${city}
 state=${state}
-jksPass=password
-ldapPass=password
+jksPass=
+ldapPass=
 inumOrg=
 inumAppliance=
 EOF
