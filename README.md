@@ -36,6 +36,11 @@ terraform init
 terraform apply
 ```
 
+### Debugging
+
+The logs from the `user-data.sh` script can be found in the
+`/var/log/cloud-init-output.log` file on the server.
+
 
 ## Support
 
