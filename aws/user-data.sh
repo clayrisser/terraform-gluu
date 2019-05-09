@@ -31,7 +31,7 @@ PID=$(machinectl status gluu_server_${gluu_version} 2>/dev/null | grep Leader | 
 if [[ $PID =~ ^-?[0-9]+$ ]]; then
   ssh -t -o IdentityFile=/etc/gluu/keys/gluu-console -o Port=60022 -o LogLevel=QUIET \
       -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-      -o PubkeyAuthentication=yes root@localhost 'echo | python /install/community-edition-setup/setup.py'
+      -o PubkeyAuthentication=yes root@localhost 'nohup sh -c "echo | python /install/community-edition-setup/setup.py" > /var/log/gluu-setup.log 2>&1 &'
 else
   echo "Gluu server is not started."
 fi
