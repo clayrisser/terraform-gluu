@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/codejamninja/terraform-gluu.svg?style=social&label=Stars)](https://github.com/codejamninja/terraform-gluu)
 
-> Initialize gluu with terraform
+> initialize gluu with terraform
 
 Please ★ this repo if you found it useful ★ ★ ★
 
@@ -10,8 +10,6 @@ Please ★ this repo if you found it useful ★ ★ ★
 ## Features
 
 * Automatically registers servers with a supported DNS provider
-    * Route 53
-    * CloudFlare
 * Adds letsencrypt certificate to gluu
 
 
@@ -20,7 +18,6 @@ Please ★ this repo if you found it useful ★ ★ ★
 * [AWS CLI](https://aws.amazon.com/cli)
 * [Terraform](https://terraform.io)
 * [GNU Make](https://www.gnu.org/software/make)
-* [Python 3](https://www.python.org)
 
 
 ## Usage
@@ -38,12 +35,6 @@ cd aws
 terraform init
 terraform apply
 ```
-
-If you want to use [route53](https://aws.amazon.com/route53) instead of [cloudflare](https://www.cloudflare.com),
-set the `cloudflare_token` to `0`.
-
-Make sure you save the generated rsa private key so you can ssh into the server.
-It will be located at `iam/iam_<your_domain>_rsa`.
 
 
 ## Support
