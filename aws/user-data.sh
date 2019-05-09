@@ -28,11 +28,11 @@ inumOrg=
 inumAppliance=
 EOF
 
-# PID=$(machinectl status gluu_server_${gluu_version} 2>/dev/null | grep Leader | awk -F ' ' '{ print $2 };' )
-# if [[ $\{PID\} =~ ^-?[0-9]+$ ]]; then
-#   ssh -t -o IdentityFile=/etc/gluu/keys/gluu-console -o Port=60022 -o LogLevel=QUIET \
-#       -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-#       -o PubkeyAuthentication=yes root@localhost 'python /install/community-edition-setup/setup.py'
-# else
-#   echo "Gluu server is not started."
-# fi
+PID=$(machinectl status gluu_server_${gluu_version} 2>/dev/null | grep Leader | awk -F ' ' '{ print $2 };' )
+if [[ $PID =~ ^-?[0-9]+$ ]]; then
+  ssh -t -o IdentityFile=/etc/gluu/keys/gluu-console -o Port=60022 -o LogLevel=QUIET \
+      -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+      -o PubkeyAuthentication=yes root@localhost 'echo | python /install/community-edition-setup/setup.py'
+else
+  echo "Gluu server is not started."
+fi
