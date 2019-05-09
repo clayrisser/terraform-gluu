@@ -21,6 +21,10 @@ variable "region" {
   type    = "string"
   default = "us-west-2"
 }
+variable "gluu_version" {
+  type    = "string"
+  default = "3.1.6"
+}
 variable "ami" {
   type    = "string"
   default = "ami-005bdb005fb00e791"
@@ -44,4 +48,20 @@ variable "domain" {
 variable "email" {
   type    = "string"
   default = "tech@codejam.ninja"
+}
+variable "country_code" {
+  type    = "string"
+  default = "US"
+}
+variable "org_name" {
+  type    = "string"
+  default = "CodeJamNinja"
+}
+variable "city" {
+  type    = "string"
+  default = "Austin"
+}
+variable "state" {
+  type    = "string"
+  default = "Texas"
 }

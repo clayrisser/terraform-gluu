@@ -1,9 +1,14 @@
 data "template_file" "user_data" {
   template = "${file("user-data.sh")}"
   vars {
-    domain = "${var.domain}"
-    email  = "${var.email}"
-    name   = "${var.name}"
+    city         = "${var.city}"
+    country_code = "${var.country_code}"
+    domain       = "${var.domain}"
+    email        = "${var.email}"
+    gluu_version = "${var.gluu_version}"
+    name         = "${var.name}"
+    org_name     = "${var.org_name}"
+    state        = "${var.state}"
   }
 }
 resource "aws_instance" "iam" {
