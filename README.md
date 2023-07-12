@@ -2,6 +2,9 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/codejamninja/terraform-gluu.svg?style=social&label=Stars)](https://github.com/codejamninja/terraform-gluu)
 
+
+![](assets/terraform-gluu.png)
+
 > initialize gluu with terraform
 
 Please ★ this repo if you found it useful ★ ★ ★
